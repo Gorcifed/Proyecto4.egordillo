@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Ingredientes{% endblock %}
+{% block header %}Ingredientes{% endblock %}
+{% block content %}
+    <a class="btn btn-secondary" href="/indice">☰ Indice</a>
+    <table class="table table-striped table-hover mt-2">
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Calorias</th>
+            <th>Precio</th>
+            <th>Inventario</th>
+            <th>Vegetariano</th>
+            <th>Tipo</th>
+            <th>Sabor</th>
+        </tr>
+    {% for ingrediente in ingredientes %}
+        <tr>
+            <td>{{ ingrediente.id }}</td>
+            <td>{{ ingrediente.nombre }}</td>
+            <td align="center">{{ ingrediente.calorias }}</td>
+            <td align="right">{{ ingrediente.precio | currencyFormat }}</td>
+            <td align="center">{{ ingrediente.inventario | round(2) }}</td>
+            <td align="center">{{ ingrediente.vegetariano }}</td>
+            <td>{{ ingrediente.tipo }}</td>
+            <td>{{ ingrediente.sabor }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

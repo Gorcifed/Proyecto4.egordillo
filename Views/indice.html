@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Índice{% endblock %}
+{% block header %}Índice{% endblock %}
+{% block content %}
+    <p>Bienvenido <b>{{usuario.alias}}</b></p>
+    <ul>
+        {% if usuario.es_admin or usuario.es_empleado %}
+        <li><a class="btn btn-primary my-1" href="/ingredientes">📋 Ingredientes</a></li>
+        {% endif %}
+        <li><a class="btn btn-primary my-1" href="/productos">📱 Productos</a></li>
+        <li><a class="btn btn-primary my-1" href="/vender">💸 Vender</a></li>
+        {% if usuario.es_admin or usuario.es_empleado %}
+        <li><a class="btn btn-primary my-1" href="/abastecer">🔺 Abastecer inventario</a></li>
+        <li><a class="btn btn-primary my-1" href="/renovarInventario">🔄️ Renovar inventario de ingredientes (0)</a></li>
+        {% endif %}
+        {% if usuario.es_admin %}
+        <li><a class="btn btn-primary my-1" href="/productoMasRentable">🔝 Producto más rentable</a></li>
+        {% endif %}
+        <li><a class="btn btn-danger my-1" href="/logout">🏃‍♂️‍➡️ Salir</a></a></li>
+    </ul>
+{% endblock %}
