@@ -65,7 +65,7 @@ def productoMasRentable():
          heladeria = current_app.config['Heladeria']
          producto_mas_rentable = heladeria.obtener_producto_mas_rentable().get("nombre", "")
          rentabilidad = heladeria.obtener_producto_mas_rentable().get("rentabilidad", "")
-         return render_template('Success.html', mensaje = f"El producto más rentable es {producto_mas_rentable}, rentabilidad: {"${:,.0f}".format(rentabilidad)}")
+         return render_template('Success.html', mensaje = f"El producto más rentable es {producto_mas_rentable}, rentabilidad: ${rentabilidad}")
      except Exception as e:
         return render_template('Error.html', mensaje = f"Error {str(e)}")
 
