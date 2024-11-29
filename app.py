@@ -1,6 +1,6 @@
 from flask import Flask,  render_template, request, redirect, url_for, session
 from flask_login import LoginManager, login_user, login_required
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from db import db
 from Controllers.controller_heladeria import *
 from Controllers.controller_producto_api import *
@@ -11,7 +11,7 @@ from Models.heladeria import Heladeria
 from Models.usuario import Usuario
 import os
 
-load_dotenv(override=True)
+#load_dotenv(override=True)
 
 def create_app():
     app = Flask(__name__, template_folder = "Views")
