@@ -1,6 +1,6 @@
 from flask import Flask,  render_template, request, redirect, url_for, session
 from flask_login import LoginManager, login_user, login_required
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 from db import db
 from Controllers.controller_heladeria import *
 from Controllers.controller_producto_api import *
@@ -10,13 +10,12 @@ from Models.producto import Producto
 from Models.heladeria import Heladeria
 from Models.usuario import Usuario
 import os
-print(os.environ)
-#load_dotenv(override=True)
+
+load_dotenv(override=True)
 
 def create_app():
     app = Flask(__name__, template_folder = "Views")
     DB_STRING_CONNECTION = f"mysql+pymysql://{os.getenv('DB_USERNAME')}:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
-    print(DB_STRING_CONNECTION)
     app.config["SQLALCHEMY_DATABASE_URI"] = DB_STRING_CONNECTION
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     secret_key = os.urandom(24)
