@@ -10,7 +10,7 @@ from Models.producto import Producto
 from Models.heladeria import Heladeria
 from Models.usuario import Usuario
 import os
-
+print(os.environ)
 #load_dotenv(override=True)
 
 def create_app():
