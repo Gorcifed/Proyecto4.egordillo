@@ -42,7 +42,7 @@ class Producto(db.Model):
 
         if self.tipo == 'Copa':
             return round(calorias, 2)
-        
+
         # Es malteada
         return round(calorias, 2) + float(200)
 
