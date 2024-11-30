@@ -36,7 +36,7 @@ class Producto(db.Model):
 
     # Método que permite calcular las calorías
     def calcular_calorias(self) -> float:
-        calorias = decimal.Decimal(0.0)
+        calorias = float(0.0)
         for ingrediente in self.ingredientes:
             calorias = calorias + ingrediente.calorias
 
@@ -44,7 +44,7 @@ class Producto(db.Model):
             return round(calorias, 2)
         
         # Es malteada
-        return round(calorias, 2) + decimal.Decimal(200)
+        return round(calorias, 2) + float(200)
 
     # Método que permite calcular la rentabilidad del producto
     def calcular_rentabilidad(self) -> int:
