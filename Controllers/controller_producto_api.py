@@ -74,8 +74,8 @@ def producto_vender_XId(idProducto):
         return jsonify({"error": f"El producto con id {idProducto} no existe!"}), 404
     except ValueError as val:
         return jsonify({"error": f"{val}"}), 405
-    #except Exception as err:
-     #   return jsonify({"error": f"Unexpected {err=}, {type(err)=}"}), 500
+    except Exception as err:
+        return jsonify({"error": f"Unexpected {err=}, {type(err)=}"}), 500
 
 # Capacidad que permite reabastecer un producto
 @api_producto_blueprint.route('/reabastecer/<idProducto>', methods = ["PUT"])

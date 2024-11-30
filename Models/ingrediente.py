@@ -26,14 +26,14 @@ class Ingrediente(db.Model):
     # Método que permite abastecer un ingrediente
     def abastecer(self) -> None:
         if self.tipo == 'Complemento':
-             self.inventario = self.inventario + decimal.Decimal(10.0)
+             self.inventario = self.inventario + float(10.0)
              return
         # Es base
-        self.inventario = self.inventario + decimal.Decimal(5.0)
+        self.inventario = self.inventario + float(5.0)
 
     # Método que permite renovar el inventario
     def renovar_inventario(self):
-        self._inventario = decimal.Decimal(0.0)
+        self._inventario = float(0.0)
 
     @hybrid_property
     def nombre(self) -> str:
@@ -70,18 +70,18 @@ class Ingrediente(db.Model):
             raise ValueError('Expected int')
     
     @hybrid_property
-    def calorias(self) -> decimal.Decimal:
+    def calorias(self) -> float:
         """ Devuelve el valor del atributo privado 'calorias' """
         return self._calorias
     
     @calorias.setter
-    def calorias(self, value: decimal.Decimal) -> None:
+    def calorias(self, value: float) -> None:
         """ 
         Establece un nuevo valor para el atributo privado 'calorias'
     
         Valida que el valor enviado corresponda al tipo de dato del atributo
         """ 
-        if isinstance(value, decimal.Decimal):
+        if isinstance(value, float):
             self._calorias = value
         else:
             raise ValueError('Expected decimal')
@@ -104,21 +104,21 @@ class Ingrediente(db.Model):
             raise ValueError('Expected int')
         
     @property
-    def inventario(self) -> decimal.Decimal:
+    def inventario(self) -> float:
         """ Devuelve el valor del atributo privado 'inventario' """
         return self._inventario
     
     @inventario.setter
-    def inventario(self, value: decimal.Decimal) -> None:
+    def inventario(self, value: float) -> None:
         """ 
         Establece un nuevo valor para el atributo privado 'inventario'
     
         Valida que el valor enviado corresponda al tipo de dato del atributo
         """ 
-        if isinstance(value, decimal.Decimal):
+        if isinstance(value, float):
             self._inventario = value
         else:
-            raise ValueError('Expected decimal')
+            raise ValueError('Expected float')
     
     @property
     def tipo(self) -> str:
