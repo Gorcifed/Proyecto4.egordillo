@@ -28,9 +28,9 @@ class Heladeria():
     def descontar_inventario(self, producto):
         for ingrediente in producto.ingredientes:
             if ingrediente.tipo == 'Complemento':
-                ingrediente.inventario = ingrediente.inventario - decimal.Decimal(1.0)
+                ingrediente.inventario = ingrediente.inventario - float(1.0)
             elif ingrediente.tipo == 'Base': # ingrediente base
-                ingrediente.inventario = ingrediente.inventario - decimal.Decimal(0.2)
+                ingrediente.inventario = ingrediente.inventario - float(0.2)
 
     # Método que renueva el inventario de ingredientes a 0 (solo aplica para complementos)
     def renovar_inventario(self):
