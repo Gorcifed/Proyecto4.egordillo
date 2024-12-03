@@ -6,14 +6,14 @@ import decimal
 # calorias: Calorias totales del producto
 # es_vegetariano: Determina si el ingrediente es vegetariano
 # return: determina si el ingrediente es sano
-def es_sano_ingrediente(calorias: decimal.Decimal, es_vegetariano: bool):
-    if isinstance(calorias, decimal.Decimal):
+def es_sano_ingrediente(calorias: float, es_vegetariano: bool):
+    if isinstance(calorias, float):
         if isinstance(es_vegetariano, bool):
-            return es_vegetariano or calorias < decimal.Decimal(100)
+            return es_vegetariano or calorias < float(100)
         else:
             raise ValueError('Expected bool')
     else:
-        raise ValueError('Expected int')
+        raise ValueError('Expected float')
 
 # Función que permite calcular la suma de calorías de un producto
 # calorias: lista con los diccionarios de ingredientes
