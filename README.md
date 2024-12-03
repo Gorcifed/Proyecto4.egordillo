@@ -8,10 +8,16 @@ En este repositorio encontrará el código fuente y recursos necesarios para eje
 ![ci](https://img.shields.io/badge/PyMySQL-1.1.1-yellow?logo=mysql)
 
 ### Archivos importantes:
-* `Proyecto03.postman_collection.json`: Colección de postman
+* `ProyectoFinal.postman_collection.json`: Colección de postman
 * `requirements.txt`: Archivo con la lista de componentes usados en la solución
 * `/SQL-Resources/backup/heladeria.sql`: Script backup de base de datos con el DDL y el DML
 * `Api-Capturas.docx`: Documento con las capturas
+
+> [!IMPORTANT]  
+> Url ralway: https://proyecto4egordillo-production.up.railway.app/.
+
+> [!IMPORTANT]  
+> Url API ralway: https://proyecto4egordillo-production.up.railway.app/api.
 
 ## Base de datos
 ### Usuarios de base de datos

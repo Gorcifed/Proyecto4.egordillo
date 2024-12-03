@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "e42a281a-a1f2-4735-adb4-46ec671dcbc4",
+		"name": "ProyectoFinal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4407986"
+	},
+	"item": [
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto4egordillo-production.up.railway.app/api/productos",
+							"protocol": "https",
+							"host": [
+								"proyecto4egordillo-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductoXId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto4egordillo-production.up.railway.app/api/productos/60",
+							"protocol": "https",
+							"host": [
+								"proyecto4egordillo-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"productos",
+								"60"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductoXNombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto4egordillo-production.up.railway.app/api/productos/nombre/otroproducto",
+							"protocol": "https",
+							"host": [
+								"proyecto4egordillo-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"productos",
+								"nombre",
+								"otroproducto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductoCalorias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto4egordillo-production.up.railway.app/api/productos/calorias/60",
+							"protocol": "https",
+							"host": [
+								"proyecto4egordillo-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"productos",
+								"calorias",
+								"60"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductoRentabilidad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto4egordillo-production.up.railway.app/api/productos/rentabilidad/60",
+							"protocol": "https",
+							"host": [
+								"proyecto4egordillo-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"productos",
+								"rentabilidad",
+								"60"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductoCosto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto4egordillo-production.up.railway.app/api/productos/costo/1",
+							"protocol": "https",
+							"host": [
+								"proyecto4egordillo-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"productos",
+								"costo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductoVender",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto4egordillo-production.up.railway.app/api/productos/vender/2",
+							"protocol": "https",
+							"host": [
+								"proyecto4egordillo-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"productos",
+								"vender",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductoReabastecer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto4egordillo-production.up.railway.app/api/productos/reabastecer/20",
+							"protocol": "https",
+							"host": [
+								"proyecto4egordillo-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"productos",
+								"reabastecer",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductoRenovar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto4egordillo-production.up.railway.app/api/productos/renovar/40",
+							"protocol": "https",
+							"host": [
+								"proyecto4egordillo-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"productos",
+								"renovar",
+								"40"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ingredientes",
+			"item": [
+				{
+					"name": "Ingredientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto4egordillo-production.up.railway.app/api/ingredientes/",
+							"protocol": "https",
+							"host": [
+								"proyecto4egordillo-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"ingredientes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IngredienteXId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto4egordillo-production.up.railway.app/api/ingredientes/32",
+							"protocol": "https",
+							"host": [
+								"proyecto4egordillo-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"ingredientes",
+								"32"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IngredienteXNombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto4egordillo-production.up.railway.app/api/ingredientes/nombre/Chispas",
+							"protocol": "https",
+							"host": [
+								"proyecto4egordillo-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"ingredientes",
+								"nombre",
+								"Chispas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "esSano",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto4egordillo-production.up.railway.app/api/ingredientes/essano/50",
+							"protocol": "https",
+							"host": [
+								"proyecto4egordillo-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"ingredientes",
+								"essano",
+								"50"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
